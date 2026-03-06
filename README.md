@@ -1,52 +1,70 @@
+---
+title: Gemini Data Science Chatbot
+emoji: 🤖
+colorFrom: blue
+colorTo: purple
+sdk: gradio
+app_file: app.py
+pinned: false
+---
+
 # Gemini Data Science Chatbot
 
-A Data Science chatbot powered by the Google Gemini model that answers questions related to machine learning, statistics, Python, and data analysis.
+An AI-powered chatbot that answers questions about **Data Science, Machine Learning, Python, SQL, and Statistics** using the Gemini large language model.
 
-This project demonstrates how to integrate a Large Language Model with a web interface to build an interactive AI assistant for learning and solving data science problems.
+The chatbot provides concise explanations, coding examples, and conceptual understanding of data science topics through an interactive chat interface.
+
+---
+
+## Live Demo
+
+Try the chatbot here:
+
+[(https://huggingface.co/spaces/Mad-an/gemini-data-science-chatbot)](https://huggingface.co/spaces/Mad-an/gemini-data-science-chatbot)
 
 ---
 
 ## Features
 
-- Answer machine learning and data science questions
-- Generate Python code examples
-- Explain statistics and ML concepts
-- Interactive web chatbot interface
-- Command line chatbot version
-- Model availability checker
+- ChatGPT-style chat interface
+- Answers machine learning and data science questions
+- Generates Python examples for ML concepts
+- Provides concise explanations (6–7 lines)
+- Interactive web interface using Gradio
+- Deployed online using Hugging Face Spaces
 
 ---
 
 ## Tech Stack
 
 - Python
-- Google Gemini API
-- Gradio (for web interface)
-- python-dotenv
+- Gemini API
+- Gradio
+- Hugging Face Spaces
 
 ---
 
 ## Project Structure
 
 ```
-gemini-data-science-chatbot/
-│
+.
 ├── app.py
 ├── simple_chat.py
 ├── gemini_model_check.py
 ├── requirements.txt
-├── .env
 └── README.md
 ```
 
+### File Description
+
 **app.py**  
-Gradio-based web chatbot interface.
+Main web chatbot interface built with Gradio.
 
 **simple_chat.py**  
-Command line chatbot version.
+Command-line chatbot version.
 
 **gemini_model_check.py**  
-Script used to check which Gemini models are available for the API key.
+Script to check available Gemini models.
 
 **requirements.txt**  
 Project dependencies.
@@ -68,45 +86,23 @@ Install dependencies
 pip install -r requirements.txt
 ```
 
-Create a `.env` file inside the project folder
+Set your Gemini API key
 
+```bash
+export GEMINI_API_KEY=your_api_key_here
 ```
-GEMINI_API_KEY=your_api_key_here
-```
 
----
-
-## Run the Web Chatbot
-
-Run the Gradio application
+Run the application
 
 ```bash
 python app.py
 ```
 
-Then open your browser and go to
+Open in browser
 
 ```
 http://127.0.0.1:7860
 ```
-
----
-
-## Run the Command Line Chatbot
-
-```bash
-python simple_chat.py
-```
-
----
-
-## Check Available Gemini Models
-
-```bash
-python gemini_model_check.py
-```
-
-This script lists the models available for your API key.
 
 ---
 
@@ -118,17 +114,15 @@ You can ask questions such as:
 - Explain gradient descent
 - Write Python code for logistic regression
 - Difference between bagging and boosting
-- Explain bias vs variance
+- What is cross validation?
 
 ---
 
-## Future Improvements
+## Deployment
 
-- Add conversation memory
-- Add dataset upload and analysis
-- Implement Retrieval Augmented Generation (RAG)
-- Deploy the chatbot online
-- Add streaming responses
+This project is deployed using **Hugging Face Spaces**.
+
+Hugging Face automatically installs dependencies from `requirements.txt` and runs the Gradio application.
 
 ---
 
