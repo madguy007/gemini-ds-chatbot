@@ -1,12 +1,4 @@
----
-title: Gemini Data Science Chatbot
-emoji: 🤖
-colorFrom: blue
-colorTo: purple
-sdk: gradio
-app_file: app.py
-pinned: false
----
+
 
 # Gemini Data Science Chatbot
 
